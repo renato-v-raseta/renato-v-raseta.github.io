@@ -1,0 +1,14 @@
+# Operating system clutter
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editor and tooling
+.obsidian/
+.smart-env/
+.vscode/
+
+# Never, under any circumstances
+_sensitive/
+*.env
+.env
