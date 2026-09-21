@@ -53,18 +53,11 @@ a:focus-visible{outline:2px solid var(--accent-2);outline-offset:3px;border-radi
 .photo{
   width:132px;height:132px;flex:none;
   border-radius:50%;
-  border:1px dashed var(--line);
-  background:radial-gradient(circle at 50% 42%, #14180F 0%, var(--bg) 72%);
-  display:grid;place-items:center;
-  text-align:center;
-  font-family:var(--mono);
-  font-size:.6rem;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  color:var(--fg-3);
-  line-height:1.5;
-  padding:14px;
-  overflow:hidden;
+  object-fit:cover;
+  /* The photo's own background is near black, so a hard edge would show as a
+     disc floating on the page. A soft ring lets it settle into the ground. */
+  box-shadow:0 0 0 1px var(--line), 0 0 34px 10px var(--bg);
+  filter:saturate(.96);
 }
 
 .ident{flex:1 1 320px;min-width:0}
